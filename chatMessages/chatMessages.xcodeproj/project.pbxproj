@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B137372A2788F4E7007D9073 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13737292788F4E7007D9073 /* Extensions.swift */; };
 		B1B02FF82788EAC30037C3FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B02FF72788EAC30037C3FC /* AppDelegate.swift */; };
 		B1B02FFA2788EAC30037C3FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B02FF92788EAC30037C3FC /* SceneDelegate.swift */; };
 		B1B02FFC2788EAC30037C3FC /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B02FFB2788EAC30037C3FC /* ConversationsViewController.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B13737292788F4E7007D9073 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B1B02FF42788EAC30037C3FC /* chatMessages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chatMessages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B02FF72788EAC30037C3FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1B02FF92788EAC30037C3FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,8 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				B1B02FFB2788EAC30037C3FC /* ConversationsViewController.swift */,
-				B1B030362788ECE90037C3FC /* LoginViewController.swift */,
-				B1B0303B2788ECFE0037C3FC /* RegisterViewController.swift */,
+				B1B030542788EF620037C3FC /* Login */,
 				B1B030402788ED380037C3FC /* PhotoViewerViewController.swift */,
 				B1B030452788ED4F0037C3FC /* VideoPlayerViewController.swift */,
 				B1B0304A2788ED680037C3FC /* NewConversationViewController.swift */,
@@ -172,6 +173,7 @@
 			children = (
 				B1B02FF72788EAC30037C3FC /* AppDelegate.swift */,
 				B1B02FF92788EAC30037C3FC /* SceneDelegate.swift */,
+				B13737292788F4E7007D9073 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -192,6 +194,15 @@
 				B1B02FFD2788EAC30037C3FC /* Main.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		B1B030542788EF620037C3FC /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B1B030362788ECE90037C3FC /* LoginViewController.swift */,
+				B1B0303B2788ECFE0037C3FC /* RegisterViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +340,7 @@
 				B1B0304B2788ED680037C3FC /* NewConversationViewController.swift in Sources */,
 				B1B02FFC2788EAC30037C3FC /* ConversationsViewController.swift in Sources */,
 				B1B030462788ED4F0037C3FC /* VideoPlayerViewController.swift in Sources */,
+				B137372A2788F4E7007D9073 /* Extensions.swift in Sources */,
 				B1B02FF82788EAC30037C3FC /* AppDelegate.swift in Sources */,
 				B1B030502788ED800037C3FC /* ProfileViewController.swift in Sources */,
 				B1B02FFA2788EAC30037C3FC /* SceneDelegate.swift in Sources */,
