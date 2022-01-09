@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UINavigationControllerDelegate {
     
     //MARK: - Views
     private let scrowllView: UIScrollView = {
@@ -21,6 +21,9 @@ class RegisterViewController: UIViewController {
         imageview.image = UIImage(systemName: "person")
         imageview.tintColor = .gray
         imageview.contentMode = .scaleAspectFit
+        imageview.layer.masksToBounds = true
+        imageview.layer.borderWidth = 2
+        imageview.layer.borderColor = UIColor.lightGray.cgColor
         return imageview
     }()
     
@@ -137,6 +140,9 @@ class RegisterViewController: UIViewController {
                                  y: 50,
                                  width: size,
                                  height: size)
+        
+        imageview.layer.cornerRadius = imageview.width/2.0
+        
         firstNameField.frame = CGRect(x: 30,
                                   y: imageview.bottom+20,
                                   width: scrowllView.width-60,
@@ -180,7 +186,7 @@ class RegisterViewController: UIViewController {
     }
     
     @objc private func didTapChangeProfilePic() {
-        print("Change pic called")
+        presentPhotoActionSheet()
     }
     
     @objc private func logginButtonTapped() {
@@ -219,6 +225,7 @@ class RegisterViewController: UIViewController {
     }
 }
 
+// MARK: - UITextFieldDelegate
 extension RegisterViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == emailField {
@@ -227,5 +234,59 @@ extension RegisterViewController: UITextFieldDelegate {
             logginButtonTapped()
         }
         return true
+    }
+}
+
+// MARK: - UIImagePickerControllerDelegate
+extension RegisterViewController: UIImagePickerControllerDelegate {
+    func presentPhotoActionSheet() {
+        let actionSheet = UIAlertController(
+            title: "Profile Picture",
+            message: "How would you like to select a picture",
+            preferredStyle: .actionSheet
+        )
+        
+        actionSheet.addAction(UIAlertAction(title: "Cancel",
+                                            style: .cancel,
+                                            handler: nil))
+        
+        actionSheet.addAction(UIAlertAction(title: "Take Photo",
+                                            style: .default,
+                                            handler: { [weak self] _ in
+                                                self?.presentCamera()
+                                            }))
+        
+        actionSheet.addAction(UIAlertAction(title: "Chose Photo",
+                                            style: .default,
+                                            handler: { [weak self] _ in
+                                                self?.presentPhotoPicker()
+                                    
+                                            }))
+        present(actionSheet, animated: true)
+    }
+    
+    func presentCamera() {
+        let viewController = UIImagePickerController()
+        viewController.sourceType = .camera
+        viewController.delegate = self
+        viewController.allowsEditing = true
+        present(viewController, animated: true)
+    }
+    
+    func presentPhotoPicker() {
+        let viewController = UIImagePickerController()
+        viewController.sourceType = .photoLibrary
+        viewController.delegate = self
+        viewController.allowsEditing = true
+        present(viewController, animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true, completion: nil)
+        guard let selectedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else { return }
+        self.imageview.image = selectedImage
+    }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
     }
 }
