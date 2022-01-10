@@ -3,11 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D995A8A08325A0BA0D68E85 /* Pods_chatMessages_chatMessagesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8EE2E670E6CE11224AFCC0D /* Pods_chatMessages_chatMessagesUITests.framework */; };
+		7FC75E127F4CFEE27A6FF56D /* Pods_chatMessagesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD4ECD1357D0600616B6FDB /* Pods_chatMessagesTests.framework */; };
+		8AAF880318C938C698644C02 /* Pods_chatMessages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029FADD74C05596A5B657C8F /* Pods_chatMessages.framework */; };
 		B137372A2788F4E7007D9073 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13737292788F4E7007D9073 /* Extensions.swift */; };
+		B186FAE0278BB1560045F4E9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B186FADF278BB1560045F4E9 /* GoogleService-Info.plist */; };
 		B1B02FF82788EAC30037C3FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B02FF72788EAC30037C3FC /* AppDelegate.swift */; };
 		B1B02FFA2788EAC30037C3FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B02FF92788EAC30037C3FC /* SceneDelegate.swift */; };
 		B1B02FFC2788EAC30037C3FC /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B02FFB2788EAC30037C3FC /* ConversationsViewController.swift */; };
@@ -42,7 +46,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		029FADD74C05596A5B657C8F /* Pods_chatMessages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chatMessages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D5AC9AA3AB3D2D61DC26626 /* Pods-chatMessages-chatMessagesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatMessages-chatMessagesUITests.release.xcconfig"; path = "Target Support Files/Pods-chatMessages-chatMessagesUITests/Pods-chatMessages-chatMessagesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		26592128223E4CD55DA3DCCE /* Pods-chatMessagesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatMessagesTests.debug.xcconfig"; path = "Target Support Files/Pods-chatMessagesTests/Pods-chatMessagesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7B46BE161175C1A09BDDE60A /* Pods-chatMessagesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatMessagesTests.release.xcconfig"; path = "Target Support Files/Pods-chatMessagesTests/Pods-chatMessagesTests.release.xcconfig"; sourceTree = "<group>"; };
+		7DD4ECD1357D0600616B6FDB /* Pods_chatMessagesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chatMessagesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8110E0828AABF9B4F1D76CD8 /* Pods-chatMessages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatMessages.release.xcconfig"; path = "Target Support Files/Pods-chatMessages/Pods-chatMessages.release.xcconfig"; sourceTree = "<group>"; };
+		88650F4470EF5D9E7437D381 /* Pods-chatMessages-chatMessagesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatMessages-chatMessagesUITests.debug.xcconfig"; path = "Target Support Files/Pods-chatMessages-chatMessagesUITests/Pods-chatMessages-chatMessagesUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A8EE2E670E6CE11224AFCC0D /* Pods_chatMessages_chatMessagesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chatMessages_chatMessagesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B13737292788F4E7007D9073 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B186FADF278BB1560045F4E9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B1B02FF42788EAC30037C3FC /* chatMessages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chatMessages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B02FF72788EAC30037C3FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1B02FF92788EAC30037C3FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +76,7 @@
 		B1B030452788ED4F0037C3FC /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		B1B0304A2788ED680037C3FC /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
 		B1B0304F2788ED800037C3FC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F3176B098B2FB9DF3BA1FD9E /* Pods-chatMessages.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatMessages.debug.xcconfig"; path = "Target Support Files/Pods-chatMessages/Pods-chatMessages.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AAF880318C938C698644C02 /* Pods_chatMessages.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FC75E127F4CFEE27A6FF56D /* Pods_chatMessagesTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,12 +100,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D995A8A08325A0BA0D68E85 /* Pods_chatMessages_chatMessagesUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52EDAC85FEBB05DC51397FC5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				029FADD74C05596A5B657C8F /* Pods_chatMessages.framework */,
+				A8EE2E670E6CE11224AFCC0D /* Pods_chatMessages_chatMessagesUITests.framework */,
+				7DD4ECD1357D0600616B6FDB /* Pods_chatMessagesTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B1B02FEB2788EAC20037C3FC = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +124,8 @@
 				B1B0300D2788EAC40037C3FC /* chatMessagesTests */,
 				B1B030182788EAC40037C3FC /* chatMessagesUITests */,
 				B1B02FF52788EAC30037C3FC /* Products */,
+				D2973A8B6F6C8FAAA145EC0F /* Pods */,
+				52EDAC85FEBB05DC51397FC5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +142,7 @@
 		B1B02FF62788EAC30037C3FC /* chatMessages */ = {
 			isa = PBXGroup;
 			children = (
+				B186FADF278BB1560045F4E9 /* GoogleService-Info.plist */,
 				B1B0302E2788EBCB0037C3FC /* Views */,
 				B1B0302D2788EB9D0037C3FC /* Resources */,
 				B1B0302C2788EB950037C3FC /* ViewModels */,
@@ -205,6 +235,19 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		D2973A8B6F6C8FAAA145EC0F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F3176B098B2FB9DF3BA1FD9E /* Pods-chatMessages.debug.xcconfig */,
+				8110E0828AABF9B4F1D76CD8 /* Pods-chatMessages.release.xcconfig */,
+				88650F4470EF5D9E7437D381 /* Pods-chatMessages-chatMessagesUITests.debug.xcconfig */,
+				1D5AC9AA3AB3D2D61DC26626 /* Pods-chatMessages-chatMessagesUITests.release.xcconfig */,
+				26592128223E4CD55DA3DCCE /* Pods-chatMessagesTests.debug.xcconfig */,
+				7B46BE161175C1A09BDDE60A /* Pods-chatMessagesTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -212,9 +255,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1B0301E2788EAC40037C3FC /* Build configuration list for PBXNativeTarget "chatMessages" */;
 			buildPhases = (
+				307ECC74FD050A4C477464CF /* [CP] Check Pods Manifest.lock */,
 				B1B02FF02788EAC30037C3FC /* Sources */,
 				B1B02FF12788EAC30037C3FC /* Frameworks */,
 				B1B02FF22788EAC30037C3FC /* Resources */,
+				324E5E01D406A195014A8274 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -229,6 +274,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1B030212788EAC40037C3FC /* Build configuration list for PBXNativeTarget "chatMessagesTests" */;
 			buildPhases = (
+				D8644FF99091D1BBF2445BBF /* [CP] Check Pods Manifest.lock */,
 				B1B030062788EAC40037C3FC /* Sources */,
 				B1B030072788EAC40037C3FC /* Frameworks */,
 				B1B030082788EAC40037C3FC /* Resources */,
@@ -247,9 +293,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1B030242788EAC40037C3FC /* Build configuration list for PBXNativeTarget "chatMessagesUITests" */;
 			buildPhases = (
+				36D2DC147B9FE86C9C8DE4DF /* [CP] Check Pods Manifest.lock */,
 				B1B030112788EAC40037C3FC /* Sources */,
 				B1B030122788EAC40037C3FC /* Frameworks */,
 				B1B030132788EAC40037C3FC /* Resources */,
+				9F06042BE84B4CCC01A72213 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -309,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1B030042788EAC40037C3FC /* LaunchScreen.storyboard in Resources */,
+				B186FAE0278BB1560045F4E9 /* GoogleService-Info.plist in Resources */,
 				B1B030012788EAC40037C3FC /* Assets.xcassets in Resources */,
 				B1B02FFF2788EAC30037C3FC /* Main.storyboard in Resources */,
 			);
@@ -329,6 +378,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		307ECC74FD050A4C477464CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-chatMessages-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		324E5E01D406A195014A8274 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-chatMessages/Pods-chatMessages-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-chatMessages/Pods-chatMessages-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-chatMessages/Pods-chatMessages-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36D2DC147B9FE86C9C8DE4DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-chatMessages-chatMessagesUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F06042BE84B4CCC01A72213 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-chatMessages-chatMessagesUITests/Pods-chatMessages-chatMessagesUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-chatMessages-chatMessagesUITests/Pods-chatMessages-chatMessagesUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-chatMessages-chatMessagesUITests/Pods-chatMessages-chatMessagesUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8644FF99091D1BBF2445BBF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-chatMessagesTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B1B02FF02788EAC30037C3FC /* Sources */ = {
@@ -517,6 +669,7 @@
 		};
 		B1B0301F2788EAC40037C3FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3176B098B2FB9DF3BA1FD9E /* Pods-chatMessages.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -536,6 +689,7 @@
 		};
 		B1B030202788EAC40037C3FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8110E0828AABF9B4F1D76CD8 /* Pods-chatMessages.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -555,6 +709,7 @@
 		};
 		B1B030222788EAC40037C3FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26592128223E4CD55DA3DCCE /* Pods-chatMessagesTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -576,6 +731,7 @@
 		};
 		B1B030232788EAC40037C3FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B46BE161175C1A09BDDE60A /* Pods-chatMessagesTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -597,6 +753,7 @@
 		};
 		B1B030252788EAC40037C3FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88650F4470EF5D9E7437D381 /* Pods-chatMessages-chatMessagesUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -616,6 +773,7 @@
 		};
 		B1B030262788EAC40037C3FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D5AC9AA3AB3D2D61DC26626 /* Pods-chatMessages-chatMessagesUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

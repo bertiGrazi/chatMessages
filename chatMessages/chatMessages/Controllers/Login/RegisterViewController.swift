@@ -6,9 +6,9 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class RegisterViewController: UIViewController, UINavigationControllerDelegate {
-    
     //MARK: - Views
     private let scrowllView: UIScrollView = {
         let scrowllView = UIScrollView()
@@ -205,7 +205,17 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate {
                 return
         }
         
-        //TODO: - Firebase Login
+        //TODO: - Firebase Log In
+        FirebaseAuth.Auth.auth().createUser(withEmail: email,password: password, completion: { authResult, error in
+            guard let result = authResult, error == nil else {
+                print("Error cureating user")
+                return
+            }
+            
+            let user = result.user
+            print("Create User: \(user)")
+           
+        })
     }
     
     fileprivate func alertUserLoginError() {
