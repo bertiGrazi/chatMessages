@@ -6,7 +6,9 @@ target 'chatMessages' do
   use_frameworks!
 
   # Pods for chatMessages
-  
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 
   target 'chatMessagesTests' do
     inherit! :search_paths
