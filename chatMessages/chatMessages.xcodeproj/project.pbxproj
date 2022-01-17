@@ -10,6 +10,8 @@
 		3D995A8A08325A0BA0D68E85 /* Pods_chatMessages_chatMessagesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8EE2E670E6CE11224AFCC0D /* Pods_chatMessages_chatMessagesUITests.framework */; };
 		7FC75E127F4CFEE27A6FF56D /* Pods_chatMessagesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD4ECD1357D0600616B6FDB /* Pods_chatMessagesTests.framework */; };
 		8AAF880318C938C698644C02 /* Pods_chatMessages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029FADD74C05596A5B657C8F /* Pods_chatMessages.framework */; };
+		B11A8FAA2795D67D003CA2FF /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11A8FA92795D67D003CA2FF /* DataBaseManager.swift */; };
+		B11A8FAF2795D868003CA2FF /* ChatAppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11A8FAE2795D868003CA2FF /* ChatAppUser.swift */; };
 		B137372A2788F4E7007D9073 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13737292788F4E7007D9073 /* Extensions.swift */; };
 		B186FAE0278BB1560045F4E9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B186FADF278BB1560045F4E9 /* GoogleService-Info.plist */; };
 		B1B02FF82788EAC30037C3FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B02FF72788EAC30037C3FC /* AppDelegate.swift */; };
@@ -54,6 +56,8 @@
 		8110E0828AABF9B4F1D76CD8 /* Pods-chatMessages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatMessages.release.xcconfig"; path = "Target Support Files/Pods-chatMessages/Pods-chatMessages.release.xcconfig"; sourceTree = "<group>"; };
 		88650F4470EF5D9E7437D381 /* Pods-chatMessages-chatMessagesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatMessages-chatMessagesUITests.debug.xcconfig"; path = "Target Support Files/Pods-chatMessages-chatMessagesUITests/Pods-chatMessages-chatMessagesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A8EE2E670E6CE11224AFCC0D /* Pods_chatMessages_chatMessagesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chatMessages_chatMessagesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B11A8FA92795D67D003CA2FF /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
+		B11A8FAE2795D868003CA2FF /* ChatAppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAppUser.swift; sourceTree = "<group>"; };
 		B13737292788F4E7007D9073 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B186FADF278BB1560045F4E9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B1B02FF42788EAC30037C3FC /* chatMessages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chatMessages.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,6 +191,7 @@
 		B1B0302B2788EB7F0037C3FC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B11A8FAE2795D868003CA2FF /* ChatAppUser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 				B1B02FF72788EAC30037C3FC /* AppDelegate.swift */,
 				B1B02FF92788EAC30037C3FC /* SceneDelegate.swift */,
 				B13737292788F4E7007D9073 /* Extensions.swift */,
+				B11A8FA92795D67D003CA2FF /* DataBaseManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -491,12 +497,14 @@
 				B1B0303C2788ECFE0037C3FC /* RegisterViewController.swift in Sources */,
 				B1B0304B2788ED680037C3FC /* NewConversationViewController.swift in Sources */,
 				B1B02FFC2788EAC30037C3FC /* ConversationsViewController.swift in Sources */,
+				B11A8FAF2795D868003CA2FF /* ChatAppUser.swift in Sources */,
 				B1B030462788ED4F0037C3FC /* VideoPlayerViewController.swift in Sources */,
 				B137372A2788F4E7007D9073 /* Extensions.swift in Sources */,
 				B1B02FF82788EAC30037C3FC /* AppDelegate.swift in Sources */,
 				B1B030502788ED800037C3FC /* ProfileViewController.swift in Sources */,
 				B1B02FFA2788EAC30037C3FC /* SceneDelegate.swift in Sources */,
 				B1B030412788ED380037C3FC /* PhotoViewerViewController.swift in Sources */,
+				B11A8FAA2795D67D003CA2FF /* DataBaseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

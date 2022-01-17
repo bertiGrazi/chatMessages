@@ -18,11 +18,11 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate {
     
     private let imageview: UIImageView = {
         let imageview = UIImageView()
-        imageview.image = UIImage(systemName: "person")
+        imageview.image = UIImage(systemName: "person.circle")
         imageview.tintColor = .gray
         imageview.contentMode = .scaleAspectFit
         imageview.layer.masksToBounds = true
-        imageview.layer.borderWidth = 2
+        imageview.layer.borderWidth = 1
         imageview.layer.borderColor = UIColor.lightGray.cgColor
         return imageview
     }()
@@ -98,7 +98,7 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate {
         button.titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)
         return button
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Log In"
@@ -109,7 +109,7 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate {
         
         imageview.isUserInteractionEnabled = true
         scrowllView.isUserInteractionEnabled = true
-      
+        
         bindUI()
         setupView()
         setupConstrains()
@@ -144,14 +144,14 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate {
         imageview.layer.cornerRadius = imageview.width/2.0
         
         firstNameField.frame = CGRect(x: 30,
-                                  y: imageview.bottom+20,
-                                  width: scrowllView.width-60,
-                                  height: 52)
+                                      y: imageview.bottom+20,
+                                      width: scrowllView.width-60,
+                                      height: 52)
         
         lastNameField.frame = CGRect(x: 30,
-                                  y: firstNameField.bottom+8,
-                                  width: scrowllView.width-60,
-                                  height: 52)
+                                     y: firstNameField.bottom+8,
+                                     width: scrowllView.width-60,
+                                     height: 52)
         
         
         emailField.frame = CGRect(x: 30,
@@ -161,22 +161,22 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate {
         
         
         passwordField.frame = CGRect(x: 30,
-                                  y: emailField.bottom+8,
-                                  width: scrowllView.width-60,
-                                  height: 52)
+                                     y: emailField.bottom+8,
+                                     width: scrowllView.width-60,
+                                     height: 52)
         
         registerButton.frame = CGRect(x: 30,
-                                  y: passwordField.bottom+20,
-                                  width: scrowllView.width-60,
-                                  height: 52)
-         
+                                      y: passwordField.bottom+20,
+                                      width: scrowllView.width-60,
+                                      height: 52)
+        
     }
     
     fileprivate func bindUI() {
         //login Button
         registerButton.addTarget(self,
-                              action: #selector(logginButtonTapped),
-                              for: .touchUpInside)
+                                 action: #selector(logginButtonTapped),
+                                 for: .touchUpInside)
         
         //change profile pic
         let gesture = UITapGestureRecognizer(target: self,
@@ -201,26 +201,40 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate {
               !email.isEmpty,
               !password.isEmpty,
               password.count >= 6 else {
-                alertUserLoginError()
-                return
+            alertUserLoginError()
+            return
         }
         
         //TODO: - Firebase Log In
-        FirebaseAuth.Auth.auth().createUser(withEmail: email,password: password, completion: { authResult, error in
-            guard let result = authResult, error == nil else {
-                print("Error cureating user")
+        DatabaseManager.shared.userExists(with: email, completion: { [weak self] exists in
+            guard let self = self else { return }
+            guard !exists else {
+                // user already exists
+                self.alertUserLoginError(message: "Looks like a user account for that email already exists")
                 return
             }
             
-            let user = result.user
-            print("Create User: \(user)")
-           
+            FirebaseAuth.Auth.auth().createUser(withEmail: email,password: password, completion: {  authResult, error in
+               
+                
+                guard authResult != nil, error == nil else {
+                    print("Error cureating user")
+                    return
+                }
+                
+                DatabaseManager.shared.insertUser(with: ChatAppUser(firtsName: firstName,
+                                                                    lastName: lastName,
+                                                                    emailAddress: email))
+                
+                self.navigationController?.dismiss(animated: true, completion: nil)
+                
+            })
         })
     }
     
-    fileprivate func alertUserLoginError() {
+    fileprivate func alertUserLoginError(message: String = "Please enter all information to create a new account") {
         let alert = UIAlertController(title: "Woops",
-                                      message: "Please enter all information to register",
+                                      message: message,
                                       preferredStyle: .alert)
         
         alert.addAction(
@@ -270,7 +284,7 @@ extension RegisterViewController: UIImagePickerControllerDelegate {
                                             style: .default,
                                             handler: { [weak self] _ in
                                                 self?.presentPhotoPicker()
-                                    
+                                                
                                             }))
         present(actionSheet, animated: true)
     }
