@@ -14,6 +14,8 @@
 		B11A8FAF2795D868003CA2FF /* ChatAppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11A8FAE2795D868003CA2FF /* ChatAppUser.swift */; };
 		B137372A2788F4E7007D9073 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13737292788F4E7007D9073 /* Extensions.swift */; };
 		B186FAE0278BB1560045F4E9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B186FADF278BB1560045F4E9 /* GoogleService-Info.plist */; };
+		B19187422799ABE100DC8C34 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19187412799ABE100DC8C34 /* TabBarViewController.swift */; };
+		B19187482799B19800DC8C34 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19187472799B19800DC8C34 /* ProfileTableViewCell.swift */; };
 		B1B02FF82788EAC30037C3FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B02FF72788EAC30037C3FC /* AppDelegate.swift */; };
 		B1B02FFA2788EAC30037C3FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B02FF92788EAC30037C3FC /* SceneDelegate.swift */; };
 		B1B02FFC2788EAC30037C3FC /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B02FFB2788EAC30037C3FC /* ConversationsViewController.swift */; };
@@ -60,6 +62,8 @@
 		B11A8FAE2795D868003CA2FF /* ChatAppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAppUser.swift; sourceTree = "<group>"; };
 		B13737292788F4E7007D9073 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B186FADF278BB1560045F4E9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B19187412799ABE100DC8C34 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		B19187472799B19800DC8C34 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		B1B02FF42788EAC30037C3FC /* chatMessages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chatMessages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B02FF72788EAC30037C3FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1B02FF92788EAC30037C3FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +125,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B19187462799B17600DC8C34 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B19187472799B19800DC8C34 /* ProfileTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		B1B02FEB2788EAC20037C3FC = {
 			isa = PBXGroup;
 			children = (
@@ -178,12 +190,14 @@
 		B1B0302A2788EB6F0037C3FC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B19187462799B17600DC8C34 /* Cell */,
 				B1B02FFB2788EAC30037C3FC /* ConversationsViewController.swift */,
 				B1B030542788EF620037C3FC /* Login */,
 				B1B030402788ED380037C3FC /* PhotoViewerViewController.swift */,
 				B1B030452788ED4F0037C3FC /* VideoPlayerViewController.swift */,
 				B1B0304A2788ED680037C3FC /* NewConversationViewController.swift */,
 				B1B0304F2788ED800037C3FC /* ProfileViewController.swift */,
+				B19187412799ABE100DC8C34 /* TabBarViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -494,6 +508,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1B030372788ECE90037C3FC /* LoginViewController.swift in Sources */,
+				B19187482799B19800DC8C34 /* ProfileTableViewCell.swift in Sources */,
 				B1B0303C2788ECFE0037C3FC /* RegisterViewController.swift in Sources */,
 				B1B0304B2788ED680037C3FC /* NewConversationViewController.swift in Sources */,
 				B1B02FFC2788EAC30037C3FC /* ConversationsViewController.swift in Sources */,
@@ -503,6 +518,7 @@
 				B1B02FF82788EAC30037C3FC /* AppDelegate.swift in Sources */,
 				B1B030502788ED800037C3FC /* ProfileViewController.swift in Sources */,
 				B1B02FFA2788EAC30037C3FC /* SceneDelegate.swift in Sources */,
+				B19187422799ABE100DC8C34 /* TabBarViewController.swift in Sources */,
 				B1B030412788ED380037C3FC /* PhotoViewerViewController.swift in Sources */,
 				B11A8FAA2795D67D003CA2FF /* DataBaseManager.swift in Sources */,
 			);
