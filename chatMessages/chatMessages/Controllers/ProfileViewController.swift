@@ -90,6 +90,5 @@ extension ProfileViewController: UITableViewDataSource {
         )
         
         present(alert, animated: true)
-        
     }
 }

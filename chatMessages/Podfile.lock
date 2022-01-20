@@ -1,4 +1,12 @@
 PODS:
+  - FBAEMKit (12.3.0):
+    - FBSDKCoreKit_Basics (= 12.3.0)
+  - FBSDKCoreKit (12.3.0):
+    - FBAEMKit (= 12.3.0)
+    - FBSDKCoreKit_Basics (= 12.3.0)
+  - FBSDKCoreKit_Basics (12.3.0)
+  - FBSDKLoginKit (12.3.0):
+    - FBSDKCoreKit (= 12.3.0)
   - Firebase/Auth (7.11.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 7.11.0)
@@ -98,12 +106,17 @@ PODS:
   - PromisesObjC (1.2.12)
 
 DEPENDENCIES:
+  - FBSDKLoginKit
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
 
 SPEC REPOS:
   trunk:
+    - FBAEMKit
+    - FBSDKCoreKit
+    - FBSDKCoreKit_Basics
+    - FBSDKLoginKit
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -120,6 +133,10 @@ SPEC REPOS:
     - PromisesObjC
 
 SPEC CHECKSUMS:
+  FBAEMKit: 10fde6cd43b59a0e0d752a63f4bbc5afe1f5329c
+  FBSDKCoreKit: 9b37c5846a09bcd0f532ea53ff5be65db673c1d2
+  FBSDKCoreKit_Basics: 032b9a964440497b883ffd48fe0e7621f9d3b74b
+  FBSDKLoginKit: 1a9a40f557c493c12ff2444d0456f5fc34d39917
   Firebase: c121feb35e4126c0b355e3313fa9b487d47319fd
   FirebaseAnalytics: cd3bd84d722a24a8923918af8af8e5236f615d77
   FirebaseAuth: 5fe4585c2ed847319f0ea68bd1d82c77e49ff9a0
@@ -135,6 +152,6 @@ SPEC CHECKSUMS:
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
 
-PODFILE CHECKSUM: 8b0b623b6940c024afba36cd392559b4ba7c5a9b
+PODFILE CHECKSUM: 91164513d32f1a1802337dddbbec78a6ebd61dd2
 
 COCOAPODS: 1.10.1

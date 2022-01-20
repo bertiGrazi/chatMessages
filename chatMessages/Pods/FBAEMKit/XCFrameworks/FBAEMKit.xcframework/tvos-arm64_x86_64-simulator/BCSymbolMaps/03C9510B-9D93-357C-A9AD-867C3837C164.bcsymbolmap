@@ -1,0 +1,18 @@
+BCSymbolMap Version: 2.0
+Apple clang version 12.0.5 (clang-1205.0.22.9)
+/Applications/Xcode_12.5.0_fb.app/Contents/Developer/Platforms/AppleTVSimulator.platform/Developer/SDKs/AppleTVSimulator14.5.sdk
+AppleTVSimulator14.5.sdk
+/Users/joesusnick/Library/Developer/Xcode/DerivedData/FacebookSDK-caqurzumxtovhygwptzcbjnyrjma/Build/Intermediates.noindex/ArchiveIntermediates/FBAEMKit_TV-Dynamic/IntermediateBuildFilesPath/FBAEMKit.build/Release-appletvsimulator/FBAEMKit_TV-Dynamic.build/DerivedSources/FBAEMKit_vers.c
+/Users/joesusnick/fbsource/fbobjc/ios-sdk/FBAEMKit
+/Users/joesusnick/fbsource/fbobjc/ios-sdk/Sources/FBAEMKit/FBAEMAdvertiserMultiEntryRule.m
+/Users/joesusnick/fbsource/fbobjc/ios-sdk/Sources/FBAEMKit/FBAEMAdvertiserRuleFactory.m
+/Users/joesusnick/fbsource/fbobjc/ios-sdk/Sources/FBAEMKit/FBAEMAdvertiserSingleEntryRule.m
+/Users/joesusnick/fbsource/fbobjc/ios-sdk/Sources/FBAEMKit/FBAEMConfiguration.m
+/Users/joesusnick/fbsource/fbobjc/ios-sdk/Sources/FBAEMKit/FBAEMEvent.m
+/Users/joesusnick/fbsource/fbobjc/ios-sdk/Sources/FBAEMKit/FBAEMInvocation.m
+/Users/joesusnick/fbsource/fbobjc/ios-sdk/Sources/FBAEMKit/FBAEMNetworker.m
+/Users/joesusnick/fbsource/fbobjc/ios-sdk/Sources/FBAEMKit/FBAEMReporter.m
+/Users/joesusnick/fbsource/fbobjc/ios-sdk/Sources/FBAEMKit/FBAEMRequestBody.m
+/Users/joesusnick/fbsource/fbobjc/ios-sdk/Sources/FBAEMKit/FBAEMRule.m
+/Users/joesusnick/fbsource/fbobjc/ios-sdk/Sources/FBAEMKit/FBAEMSettings.m
+/Users/joesusnick/fbsource/fbobjc/ios-sdk/Sources/FBAEMKit/FBAEMUtility.m

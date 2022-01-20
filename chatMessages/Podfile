@@ -9,6 +9,7 @@ target 'chatMessages' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod 'FBSDKLoginKit'
 
   target 'chatMessagesTests' do
     inherit! :search_paths
