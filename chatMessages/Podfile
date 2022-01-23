@@ -10,6 +10,8 @@ target 'chatMessages' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'JGProgressHUD'
+  pod 'MessageKit'
+
 
 
   target 'chatMessagesTests' do
