@@ -35,10 +35,17 @@ extension DatabaseManager {
     }
     
     /// Inserts new user to database
-    public func insertUser(with user: ChatAppUser) {
+    public func insertUser(with user: ChatAppUser, completion: @escaping (Bool) -> Void) {
         database.child(user.safeEmail).setValue([
                  "first_name": user.firtsName,
                  "last_name": user.lastName,
-        ])
+        ], withCompletionBlock: {error, _ in
+            guard error == nil else {
+                print("Failed ou write to database")
+                completion(false)
+                return
+            }
+            completion(true)
+        })
     }
 }

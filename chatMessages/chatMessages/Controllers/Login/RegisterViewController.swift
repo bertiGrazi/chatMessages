@@ -178,7 +178,7 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate {
     fileprivate func bindUI() {
         //login Button
         registerButton.addTarget(self,
-                                 action: #selector(logginButtonTapped),
+                                 action: #selector(registerButtonTapped),
                                  for: .touchUpInside)
         
         //change profile pic
@@ -192,7 +192,7 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate {
         presentPhotoActionSheet()
     }
     
-    @objc private func logginButtonTapped() {
+    @objc private func registerButtonTapped() {
         
         emailField.resignFirstResponder()
         passwordField.resignFirstResponder()
@@ -220,11 +220,11 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate {
                 self.spinner.dismiss()
             }
             
-            guard !exists else {
-                // user already exists
-                self.alertUserLoginError(message: "Looks like a user account for that email already exists")
-                return
-            }
+//            guard !exists else {
+//                // user already exists
+//                self.alertUserLoginError(message: "Looks like a user account for that email already exists")
+//                return
+//            }
             
             FirebaseAuth.Auth.auth().createUser(withEmail: email,password: password, completion: {  authResult, error in
                
@@ -234,12 +234,33 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate {
                     return
                 }
                 
-                DatabaseManager.shared.insertUser(with: ChatAppUser(firtsName: firstName,
-                                                                    lastName: lastName,
-                                                                    emailAddress: email))
+                 let chatUser = ChatAppUser(firtsName: firstName,
+                                            lastName: lastName,
+                                            emailAddress: email)
+                
+                DatabaseManager.shared.insertUser(with: chatUser, completion: {
+                    sucess in
+                    if sucess {
+                        //upload image
+                        guard let image = self.imageview.image, let data = image.pngData() else {
+                            return
+                        }
+                        let fileName = chatUser.profilePictureFileName
+                        StorageManager.shared.uploadProfilePicture(with: data,fileName: fileName,completion: { result in
+                            switch result {
+                            case .success(let downloadUrl):
+                                UserDefaults.standard.set(downloadUrl, forKey: "profile_picture_url")
+                                print(downloadUrl)
+                            
+                            case .failure(let error):
+                                print("Storage manager error: \(error)")
+                            }
+                                                                    
+                        })
+                    }
+                })
                 
                 self.navigationController?.dismiss(animated: true, completion: nil)
-                
             })
         })
     }
@@ -267,7 +288,7 @@ extension RegisterViewController: UITextFieldDelegate {
         if textField == emailField {
             passwordField.becomeFirstResponder()
         } else if textField == passwordField {
-            logginButtonTapped()
+            registerButtonTapped()
         }
         return true
     }
