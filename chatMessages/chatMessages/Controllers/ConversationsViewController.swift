@@ -35,11 +35,25 @@ class ConversationsViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         
+        addNewConversation()
         validateAuth()
         setupView()
         setupConstrains()
         setupTableView()
         fetchConversations()
+    }
+    
+    fileprivate func addNewConversation() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose,
+                                                            target: self,
+                                                            action: #selector(didTapComposeButton)
+        )
+    }
+    
+    @objc fileprivate func didTapComposeButton() {
+        let vc = NewConversationViewController()
+        let navVC = UINavigationController(rootViewController: vc)
+        present(navVC, animated: true)
     }
     
     fileprivate func validateAuth() {
