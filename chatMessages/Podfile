@@ -6,9 +6,15 @@ target 'chatMessages' do
   use_frameworks!
 
   # Pods for chatMessages
+  
+  #Firebase
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+
+  #Google Sign In 
+  pod 'GoogleSignIn'
+
 
   target 'chatMessagesTests' do
     inherit! :search_paths
