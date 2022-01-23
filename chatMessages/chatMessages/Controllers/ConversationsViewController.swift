@@ -34,15 +34,12 @@ class ConversationsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         
         validateAuth()
         setupView()
         setupConstrains()
         setupTableView()
+        fetchConversations()
     }
     
     fileprivate func validateAuth() {
@@ -65,11 +62,12 @@ class ConversationsViewController: UIViewController {
     }
     
     fileprivate func setupConstrains() {
-        
+        super.viewDidLayoutSubviews()
+        tableView.frame = view.bounds
     }
     
     fileprivate func fetchConversations() {
-        
+        tableView.isHidden = false
     }
 }
 
@@ -84,7 +82,10 @@ extension ConversationsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "Hello World"
+        cell.textLabel?.text = "Hello Word"
+        cell.textLabel?.textAlignment = .center
+        cell.textLabel?.textColor = .systemPink
+        cell.accessoryType = .disclosureIndicator
         return cell
     }
     
@@ -93,7 +94,7 @@ extension ConversationsViewController: UITableViewDataSource {
         
         let vc = ChatViewController()
         vc.title = "Jenny Smith"
-        vc.navigationItem.largeTitleDisplayMode = .always
+        vc.navigationItem.largeTitleDisplayMode = .never
         navigationController?.pushViewController(vc, animated: true)
     }
 }
