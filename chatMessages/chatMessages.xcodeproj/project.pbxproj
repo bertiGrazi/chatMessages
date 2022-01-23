@@ -30,6 +30,7 @@
 		B1B030462788ED4F0037C3FC /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B030452788ED4F0037C3FC /* VideoPlayerViewController.swift */; };
 		B1B0304B2788ED680037C3FC /* NewConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B0304A2788ED680037C3FC /* NewConversationViewController.swift */; };
 		B1B030502788ED800037C3FC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B0304F2788ED800037C3FC /* ProfileViewController.swift */; };
+		B1B2B8D2279DC6B80050F881 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B2B8D1279DC6B80050F881 /* ChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		B1B030452788ED4F0037C3FC /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		B1B0304A2788ED680037C3FC /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
 		B1B0304F2788ED800037C3FC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B1B2B8D1279DC6B80050F881 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		F3176B098B2FB9DF3BA1FD9E /* Pods-chatMessages.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatMessages.debug.xcconfig"; path = "Target Support Files/Pods-chatMessages/Pods-chatMessages.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,6 +200,7 @@
 				B1B0304A2788ED680037C3FC /* NewConversationViewController.swift */,
 				B1B0304F2788ED800037C3FC /* ProfileViewController.swift */,
 				B19187412799ABE100DC8C34 /* TabBarViewController.swift */,
+				B1B2B8D1279DC6B80050F881 /* ChatViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -520,6 +523,7 @@
 				B1B02FFA2788EAC30037C3FC /* SceneDelegate.swift in Sources */,
 				B19187422799ABE100DC8C34 /* TabBarViewController.swift in Sources */,
 				B1B030412788ED380037C3FC /* PhotoViewerViewController.swift in Sources */,
+				B1B2B8D2279DC6B80050F881 /* ChatViewController.swift in Sources */,
 				B11A8FAA2795D67D003CA2FF /* DataBaseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
