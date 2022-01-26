@@ -166,6 +166,10 @@ class LoginViewController: UIViewController {
             }
             
             let user = result.user
+            
+            //Save email users adress
+            UserDefaults.standard.setValue(email, forKey: "enail")
+            
             print("Logged in User: \(user)")
             self.navigationController?.dismiss(animated: true, completion: nil)
         })
